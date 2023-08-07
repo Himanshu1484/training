@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-1</title>
+   <style>
+        .i{
+            color: #ffffff;
+            background-color:blue;
+            padding:10px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            border-radius:50%;
+            border-bottom-left-radius: 0%;
+            margin-right: 3px;
+            margin-left: 5px;
+        }
+        table{
+            background-color: #eeeaeac3;
+            border-collapse: separate;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        td{
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+        input{
+            border-radius: 4px;
+            padding: 5px;
+            border:none;
+            background-color: #dcdff1e1;
+            margin: 5px;
+            width: 350px;
+        }
+        textarea{
+            border-radius: 4px;
+            padding: 5px;
+            border:none;
+            background-color: #dcdff1e1;
+            margin: 5px; 
+            resize:vertical ;
+            width: 350px;
+        }
+        select{
+            border-radius: 4px;
+            padding: 5px;
+            border:none;
+            background-color: #dcdff1e1;
+            margin: 5px;
+            width: 360px;
+            color: rgba(0, 0, 0, 0.42);
+        }
+        button{
+            padding: 10px 40px 10px 40px;
+            width: 100%;
+            border: none;
+            background-color: blue;
+            color: white;
+            font-weight: bold;
+            margin-left: 1px;
+        }
+    </style>
+</head>
+<body>
+        <center>
+         <form action="">
+            <table>
+            <tr>
+                <td><label class="i" for=""><b>1</b></label><label for="" style="font-size: larger;"><b>Candidate info</b></label><td>
+            </tr>
+            <tr>
+                <td><input type="text" required placeholder="Your Name*"></td>
+            </tr>
+            <tr>
+                <td><input type="Email" required placeholder="Your Email*"></td>
+            </tr>
+            <tr>
+                <td><textarea rows="3" placeholder="About Yourself"></textarea></td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="intrest" style="margin: 0;"><h3 style="margin: 0;margin-left:5px;">Intrests:</h3></label>
+                    <select name="intrest" >
+                        <option value="FishKeeping" >FishKeeping</option>
+                    </select>
+                </td>
+            </tr>
+            <tr style="margin-top: 20px;">
+                 <td><label class="i" for=""><b>2</b></label><label for="" style="font-size: larger;"><b>Additional info</b></label><td>
+            </tr>
+            <tr>
+                <td><textarea rows="3" placeholder="About Your School"></textarea></td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="submit">Submit</button>
+                </td>
+            </tr>
+           </table>
+         </form>   
+        </center>
+
+</body>
+</html>

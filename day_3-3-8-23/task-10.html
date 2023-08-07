@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-10</title>
+</head>
+<body>
+    <p>10.Sort the given string based on ASCII value.</p>
+    <input type="text" placeholder="Enter the string" id="txt">
+    <p id="p"></p>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <button onclick="fun()">submit</button>
+
+    <script>
+        function fun()
+        {
+            var str=""+document.getElementById("txt").value;
+                str=str.split("");
+                var str2="";
+                var temp;
+
+                for(var i=0;i<str.length;i++)
+                {
+                    for(var j=i;j<str.length;j++)
+                    {
+                        if(str[i].charCodeAt(0)>str[j].charCodeAt(0))
+                        {         
+                            temp=str[i];
+                            str[i]=str[j];
+                            str[j]=temp;
+                        }
+                    }
+                    str2+=str[i]+" ";
+                }
+            document.getElementById("p").innerHTML=str2;
+        }
+    </script>
+</body>
+</html>

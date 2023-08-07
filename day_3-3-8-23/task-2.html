@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-2</title>
+</head>
+<body>
+    <p>2. "Javascript program that will return an integer number corresponding to the
+        amount of digits in the given integer num.
+        Ex. num_of_digits(1000) ➞ 4
+        num_of_digits(12) ➞ 2"</p>
+    <input type="number" id="num" placeholder="Enter the number::">
+    <button onclick="fun()">submit</button>
+    <p id="p"></p>
+
+    <script>
+        function fun(){
+            var c=0;
+            let x=document.getElementById("num").value;
+            if(x<0){
+                x=x*-1;
+            }
+              var len=  ""+x;
+          
+            document.getElementById("p").innerHTML=len.length;
+        }
+    </script>
+</body>
+</html>

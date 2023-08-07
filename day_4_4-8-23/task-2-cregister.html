@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm_registration</title>
+    <style>
+        body{            background-color: rgba(205, 211, 211, 0.226);
+        }
+        table{
+            border:2px solid rgb(53, 28, 122);
+            border-radius: 8px;
+            width: 600px;
+            border-spacing: 0;
+            border-collapse: separate;
+           
+        }
+        #y{
+            border-top-left-radius:7px ;
+            border-top-right-radius:7px ;
+        }
+        #x{
+            border-bottom-left-radius:7px ;
+            border-bottom-right-radius:7px ;
+        }
+        #myinput {
+            height: 7px;
+            width: 85%;
+          }
+        td{
+            font-weight: bold;
+            color: rgb(15, 95, 15);
+            padding: 10px;
+            width: 50%;
+        }
+        input{
+            border-radius: 5px;
+          }
+          button{
+            color: aliceblue;
+            background-color: rgba(11, 60, 44, 0.795);
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+          
+        }
+    </style>
+</head>
+<body><center>
+    <form action="task-2-home.html">
+    <table>
+        <tr>
+            <td colspan="2" id="y" style="text-align: center;font-size:30px;color:aliceblue;background-color:rgb(166, 173, 179)"><b>Confirm Registration</b></td>
+        </tr>
+        <tr>
+            <td>
+                <label for="fname">First_Name*</label><br>
+                <input type="text" name="fname" required placeholder="Enter your name:" style="  width: 98%;">
+            </td>
+            <td>
+                <label for="lname">Last_Name</label><br>
+                <input type="text" name="lname" placeholder="Enter your name:" style="  width: 98%;">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <label for="Email">Email*</label><br>
+                <input type="email" name="Email" placeholder="Enter your Email:" required style="width: 99%;">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="password">Password*</label><br>
+                <input type="password" name="password" required pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,16}" oninvalid="setCustomValidity('Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters')" placeholder="Enter your password:" style="  width: 98%;">
+            </td>
+            <td>
+                <label for="Confirm_Password">Confirm_Password*</label><br>
+                <input type="password" name="Confirm_Password" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,16}" oninvalid="setCustomValidity('Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters')" placeholder="Enter your password:" style="  width: 98%;">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="">Gender</label><br>
+                <input type="radio" name="gen" value="Male">
+                <label for="male">Male</label>
+                <input type="radio" name="gen" value="FeMale">
+                <label for="male">Female</label>
+            </td>
+            <td>
+                <label for="hobbies">Hobbies</label><br>
+                <input type="checkbox" style="margin: 0;" name="hobbies">
+                <label for="hobbies">Music</label>
+                <input type="checkbox" style="margin: 0;" name="hobbies">
+                <label for="hobbies">Sports</label>
+                <input type="checkbox" style="margin: 0;" name="hobbies">
+                <label for="hobbies">Travels</label>
+                <input type="checkbox" style="margin: 0;" name="hobbies">
+                <label for="hobbies">Movies</label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="password">Source of Income</label><br>
+                <Select name="Soi" style="width: 98%;border-radius:4px">
+                    <option value="Employed">Employed</option>
+                    <option value="UnEmployed">UnEmployed</option>
+                    <option value="Employed">Employed</option>
+                    <option value="Unemployed">Unemployed</option>
+                    </Select>
+            </td>
+            <td>
+                <label for="Income">Income</label><br>
+                <input type="range" id="myinput" style="color: aquamarine;" min="0" max="20000">
+                <label for="income" style="width: fit-content;background-color:rgba(49, 202, 202, 0.808);border-radius:4px;padding:2px">20k</label><br><br>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="profile">Uplode profile picture:</label><br>
+                <input type="file" name="profile"  placeholder="choose file" style="  width: 98%;">
+            </td>
+            <td>
+                <label for="Age">Age</label><br>
+                <input type="number" name="Age" required placeholder="Enter your Age:" style="  width: 98%;">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <label for="Bio">Bio</label><br>
+                <textarea name="bio" id="" style="width: 99%;border-radius:5px" rows="4"></textarea><br>          
+            </td>
+        </tr>
+        <tr>
+            <td id="x" colspan="2" style="text-align: right;font-size:30px;color:aliceblue;background-color:rgb(166, 173, 179)"><button type="submit">Submit</button>    </td>
+        </tr>
+    </table></center>
+</form>
+</body>
+</html>

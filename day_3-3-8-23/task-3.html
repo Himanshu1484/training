@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-3</title>
+</head>
+<body>
+    <p>3. Write a javascript program that returns `true` if the input string includes the
+        string "ee".</p>
+    <input type="text" id="str" placeholder="Enetre the string">
+    <button onclick="fun()">submit</button>
+    <p id="p"></p>
+
+    <script>
+        function fun(){
+            var i=0;
+            var s=""+document.getElementById("str").value;
+            for(i=0;i<(s.length)-1;i++){
+                if(s.charAt(i)=='e' && s.charAt(i+1)=='e')
+                {
+                    document.getElementById("p").innerHTML="true";
+                    break;
+                }
+                else{
+                    document.getElementById("p").innerHTML="false";
+
+                }
+            }
+        }
+    </script>
+</body>
+</html>

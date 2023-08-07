@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-4</title>
+    <style>
+        p{
+            font-weight: bold;
+            font-size: larger;
+        }
+    </style>
+</head>
+<body onload="fun()">
+    <p id="p"></p>
+    <script>
+
+        function fun(){
+        var d=new Date();
+        var hour=13-d.getHours();
+        var minute=60-d.getMinutes();
+        var second=60-d.getSeconds();
+        document.getElementById("p").innerHTML=""+hour+" hours"+minute+" minutes"+second+" seconds remaining for lunch";
+        setTimeout(fun, 1000);
+
+    }
+    </script>
+</body>
+</html>

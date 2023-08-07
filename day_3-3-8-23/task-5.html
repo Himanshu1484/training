@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-5</title>
+</head>
+<body>
+    <p>5. "Write a JavaScript function that takes a two-digit number and determines if
+        it's the largest of two possible digit swaps
+        Ex:- If we give 43 as user input then it will return false because swapping 43
+        gives us 34, and 43 > 34."</p>
+    <input type="number" id="num" placeholder="Enter two digit number">
+    <button onclick="fun()">submit</button>
+    <p id="p"></p>
+
+    <script>
+        function fun(){
+            var num=document.getElementById("num").value;
+            var s=""+num;
+            var tmp=num;
+            var d=num;
+            var rev=0;
+            var i;
+            for(i=0;i<s.length;i++)
+            {   tmp =d% 10;
+                rev=rev*10+tmp;
+                d=d/10|0;
+            }
+            if(rev>num){
+            document.getElementById("p").innerHTML="true";}
+            else if(rev==num){            document.getElementById("p").innerHTML="same";}
+            else{            document.getElementById("p").innerHTML="false";}
+        }
+    </script>
+</body>
+</html>

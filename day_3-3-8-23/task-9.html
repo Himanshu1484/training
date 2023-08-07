@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-9</title>
+</head>
+<body>
+  <p>9."Create a function that moves all capital letters to the front of a word.
+    Ex. ""hApPy"" ➞ ""APhpy"""</p>
+    <input type="text" placeholder="Enter the string" id="txt">
+    <button onclick="fun()">submit</button>
+    <p id="p"></p>
+    
+    <script>
+        function fun(){
+            var str=""+document.getElementById("txt").value;
+            var b="";
+            var e="";
+            var i;
+            for(i=0;i<str.length;i++)
+            {
+          if(str.charCodeAt(i)>=65 && str.charCodeAt(i)<=90)
+          {
+            b=b+str.charAt(i);
+          }
+          else{
+            e=e+str.charAt(i);
+          }
+        }
+
+        document.getElementById('p').innerHTML=b+e;
+    }
+    </script>
+</body>
+</html>

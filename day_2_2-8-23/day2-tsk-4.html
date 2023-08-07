@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-4</title>
+
+    <style>
+        input{
+            border-radius: 4px;
+            width: 400px;
+            height: 20px;
+            transition: 1s;
+        } 
+          table{
+            padding: 10px;
+            border-collapse: separate;
+            border-radius: 10px;
+            background-color: rgb(212, 217, 221);
+            margin-top: 100px;
+            transition: 1s;
+        }
+        td{
+           padding-bottom: 15px;transition: 1s;
+        }
+        label{
+            color: rgb(26, 106, 81); 
+        }
+        button{
+            color: aliceblue;
+            background-color: rgba(11, 60, 44, 0.795);
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+          
+        }
+
+        /*  Width   */
+        @media only screen and (max-width: 550px)  {
+            input{            transition: 1s;
+                width: 350px;
+            }            
+        }
+      
+        @media only screen and (max-width: 450px)  {
+            input{
+                width: 300px;
+            }            
+        }
+        @media only screen and (max-width: 400px)  {
+            input{
+                width: 200px;
+            }            
+        }
+        @media only screen and (max-width: 300px)  {
+            input{
+                width: 140px;
+            }            
+        }
+        @media only screen and (max-width: 200px)  {
+            input{
+                width: 200px;
+            }            
+        }
+        
+        /*   Height   */
+
+        @media only screen and (max-height: 450px)  {
+     
+            table{margin-top: 50px;transition: 1s;} 
+            td{padding-bottom: 15px;}         
+        }
+        @media only screen and (max-height: 400px)  { 
+
+            td{padding-bottom: 10px;}        
+        table{margin-top: 30px;transition: 1s;} 
+        }
+        @media only screen and (max-height: 360px)  {    
+                td{padding-bottom: 5px;} 
+                table{margin-top: 10px;transition: 1s;}    
+                input{            transition: 1s;
+                         height: 10px;            }     
+}
+     
+    </style>
+</head>
+<body>
+<center>
+    <form action="">
+        <table>
+            <tr>
+                <td><br><label for="fname">Enter Your First Name:</label><br>
+                <input type="text"></td>
+            </tr>
+            <tr>
+                <td><label for="lname">Enter Your Last Name:</label><br>
+                <input type="text"></td>
+            </tr>
+            <tr>
+                <td><label for="Uname">Enter Your User Name*:</label><br>
+                <input type="text" required></td>
+            </tr>
+            <tr>
+                <td><label for="pwd">Enter Your Password*:</label><br>
+                <input type="password" required></td>
+            </tr>
+            <tr>
+                <td style="  text-align: right;"><button type="submit">Submit</button></td>
+            </tr>
+        </table>
+    </form>
+</center>
+</body>
+</html>

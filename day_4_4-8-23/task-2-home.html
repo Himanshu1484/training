@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home_page</title>
+    <style>
+
+        html,body{
+            margin: 0;
+            height: 100%;
+        }
+        body{
+            background-color: rgb(205, 211, 211);
+            position: relative;;
+        }
+        p{  
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-110%);
+            font-size: 50px;
+            font-weight: bold;
+            text-shadow: 1px 1px 0.9px rgb(37, 35, 35),-1px -1px 0.9px rgb(30, 28, 28),-1px 1px 0.9px rgb(31, 27, 27),1px -1px 0.9px rgb(33, 27, 27);;
+            color: rgb(13, 7, 7);
+        }
+        table{
+            width: 100%;
+            background-color: #2925256d;
+        }
+        td{border: 1px solid rgba(57, 53, 53, 0.196);
+            padding: 10px;
+            background-color: #a0989800;
+            text-align: center;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            font-size: large;
+        }
+        td:hover{
+            background-color: #bbb8b8;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td onclick="location.href='task-2-webpage.html'">Myweb</td>
+            <td onclick="location.href='task-2-register.html'">Register</td>
+            <td onclick="location.href='task-2-login.html'">Login</td>
+            <td onclick="location.href='task-2-cregister.html'"> Confirm Registration</td>            
+        </tr>
+    </table>
+    <p>Welcome</p>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-16</title>
+    <style>
+        table{
+            border: 2px solid black;
+            border-collapse: separate;
+            border-radius: 10px;
+            background-color: rgb(187, 190, 193);
+        }
+        td{
+            padding: 10px;
+        }
+        button{
+            width: 100%;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <p>15.Create a basic calculator using HTML, CSS, and JavaScript with buttons for
+        numbers and basic arithmetic operations.</p>
+    <table>
+
+
+        <tr><td colspan="4"><input type="text" id="str" placeholder="calculator"></td></tr>
+
+
+        <tr>
+            <td><button onclick="add('1')">1</button></td>
+            <td><button onclick="add('2')">2</button></td>
+            <td><button onclick="add('3')">3</button></td>
+            <td><button onclick="add('*')">*</button></td>
+        </tr>
+
+        <tr>
+            <td><button onclick="add('4')">4</button></td>
+            <td><button onclick="add('5')">5</button></td>
+            <td><button onclick="add('6')">6</button></td>
+            <td><button onclick="add('/')">/</button></td>
+        </tr>
+
+        <tr>
+            <td><button onclick="add('7')">7</button></td>
+            <td><button onclick="add('8')">8</button></td>
+            <td><button onclick="add('9')">9</button></td>
+            <td><button onclick="add('%')">%</button></td>
+        </tr>
+
+        <tr>
+            <td><button onclick="add('0')">0</button></td>
+            <td><button onclick="add('+')">+</button></td>
+            <td><button onclick="add('-')">-</button></td>
+            <td><button onclick="fun()">=</button></td>
+        </tr>
+    </table>
+
+    <script>
+
+        function add(s){
+            document.getElementById("str").value+=s;
+        }
+        function fun(){
+           var str= ""+document.getElementById("str").value;
+           for(i=0;i<str.length;i++)
+           {
+            if(str.charAt(i)=='*' || str.charAt(i)=='/' || str.charAt(i)=='%' )
+            {
+                var q=i+1;
+                var m=i-1;
+                var temp="";
+                var no1="";
+                var no2="";
+                var evl;
+                while((str.charCodeAt(q)>47 && str.charCodeAt(q)<58)||str.charAt(q)==".")
+                {
+                    no2+=str.charAt(q);
+                    q+=1;
+                }
+                while((str.charCodeAt(m)>47 && str.charCodeAt(m)<58)||str.charAt(m)==".")
+                {
+                    temp+=str.charAt(m);
+                   m-=1;
+                }
+                for(k=(temp.length)-1;k>=0;k--)
+                {
+                    no1+=temp.charAt(k);
+                }
+                if(str.charAt(i)=='*'){evl=parseFloat(no1)*parseFloat(no2);}
+                if(str.charAt(i)=='/'){evl=parseFloat(no1)/parseFloat(no2);}
+                if(str.charAt(i)=='%'){evl=parseFloat(no1)%parseFloat(no2);}
+                str=str.slice(0,m+1)+evl+str.slice(q);
+                if(no1!="" && no2!=""){
+                    document.getElementById("str").value=str;}
+            } 
+
+           }
+           for(i=0;i<str.length;i++)
+           {
+            if(str.charAt(i)=='+' || str.charAt(i)=='-')
+            {
+
+                var q=i+1;
+                var m=i-1;
+              
+                var temp="";
+                var no1="";
+                var no2="";
+                var evl;
+                while((str.charCodeAt(q)>47 && str.charCodeAt(q)<58)||str.charAt(q)==".")
+                {
+                    no2+=str.charAt(q);
+                    q+=1;
+                }
+                while((str.charCodeAt(m)>47 && str.charCodeAt(m)<58)||str.charAt(m)==".")
+                {
+                    temp+=str.charAt(m);
+                   m-=1;
+                }
+                for(k=(temp.length)-1;k>=0;k--)
+                {
+                    no1+=temp.charAt(k);
+                }
+                if(str.charAt(i)=='+'){evl=parseFloat(no1)+parseFloat(no2);}
+                if(str.charAt(i)=='-'){evl=parseFloat(no1)-parseFloat(no2);}
+                str=str.slice(0,m+1)+evl+str.slice(q);
+                if(no1!="" && no2!=""){
+                    document.getElementById("str").value=str;
+                    i=0;
+                }
+            } 
+
+           }
+
+
+        }
+
+    </script>
+</body>
+</html>

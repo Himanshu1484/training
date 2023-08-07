@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-5</title>
+    <!-- Add Firebase SDK script tags -->
+<script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-analytics.js"></script>
+<!-- Add other Firebase products that you want to use (e.g., database, auth, etc.) -->
+
+    <style>
+        table{
+            border:2px solid rgb(53, 28, 122);
+            border-radius: 8px;
+            width: 600px;
+            border-spacing: 0;
+            border-collapse: separate;
+           
+        }
+        #y{
+            border-top-left-radius:7px ;
+            border-top-right-radius:7px ;
+        }
+        #x{
+            border-bottom-left-radius:7px ;
+            border-bottom-right-radius:7px ;
+        }
+        #myinput {
+            background: linear-gradient(to right, #82CFD0 0%, #82CFD0 50%, #fff 50%, #fff 100%);
+            border: solid 1px #82CFD0;
+            border-radius: 8px;
+            height: 7px;
+            width: 85%;
+            outline: none;
+            transition: background 450ms ease-in;
+            -webkit-appearance:none
+          }
+        td{
+            font-weight: bold;
+            color: rgb(15, 95, 15);
+            padding: 10px;
+            width: 50%;
+        }
+        input{
+            border-radius: 5px;
+          }
+          button{
+            color: aliceblue;
+            background-color: rgba(11, 60, 44, 0.795);
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body><center>
+    <form method="POST" action=" " id="frmContact">
+    <table>
+        <tr>
+            <td colspan="2" id="y" style="text-align: center;font-size:30px;color:aliceblue;background-color:rgb(166, 173, 179)"><b>Create Account</b></td>
+        </tr>
+        <tr>
+            <td>
+                <label for="fname">First_Name*</label><br>
+                <input type="text" id="fname" name="fname" required placeholder="Enter your name:" style="  width: 98%;">
+            </td>
+            <td>
+                <label for="lname">Last_Name</label><br>
+                <input type="text" id="lname" name="lname" placeholder="Enter your name:" style="  width: 98%;">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <label for="Email">Email*</label><br>
+                <input type="email" id="email" name="email" placeholder="Enter your Email:" required style="width: 99%;">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="password">Password*</label><br>
+                <input type="password" id="password" name="password" required placeholder="Enter your password:" style="  width: 98%;">
+            </td>
+            <td>
+                <label for="Confirm_Password">Confirm_Password*</label><br>
+                <input type="password" id="cpassword" name="Confirm_Password" placeholder="Enter your password:" style="  width: 98%;">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="">Gender</label><br>
+                <input type="radio" name="gen" value="Male">
+                <label for="male">Male</label>
+                <input type="radio" name="gen" value="FeMale">
+                <label for="male">Female</label>
+            </td>
+            <td>
+                <label for="hobbies">Hobbies</label><br>
+                <input type="checkbox" style="margin: 0;" name="hobbies">
+                <label for="hobbies">Music</label>
+                <input type="checkbox" style="margin: 0;" name="hobbies">
+                <label for="hobbies">Sports</label>
+                <input type="checkbox" style="margin: 0;" name="hobbies">
+                <label for="hobbies">Travels</label>
+                <input type="checkbox" style="margin: 0;" name="hobbies">
+                <label for="hobbies">Movies</label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="password">Source of Income</label><br>
+                <Select name="Soi" id="status" style="width: 98%;border-radius:4px">
+                    <option value="Employed">Employed</option>
+                    <option value="UnEmployed">UnEmployed</option>
+                    <option value="Employed">Employed</option>
+                    <option value="Unemployed">Unemployed</option>
+                    </Select>
+            </td>
+            <td>
+                <label for="Income">Income</label><br>
+                <input type="range" id="myinput" style="color: aquamarine;" min="0" max="20000">
+                <label for="income" style="width: fit-content;background-color:rgba(49, 202, 202, 0.808);border-radius:4px;padding:2px">20k</label><br><br>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="profile">Uplode profile picture:</label><br>
+                <input type="file" id="profile" name="profile"  placeholder="choose file" style="  width: 98%;">
+            </td>
+            <td>
+                <label for="Age">Age</label><br>
+                <input type="number" id="age" name="Age" placeholder="Enter your Age:" style="  width: 98%;">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <label for="Bio">Bio</label><br>
+                <textarea name="bio" id="bio" style="width: 99%;border-radius:5px" rows="4"></textarea><br>          
+            </td>
+        </tr>
+        <tr>
+            <td id="x" colspan="2" style="text-align: right;font-size:30px;color:aliceblue;background-color:rgb(166, 173, 179)"><button type="submit" sendMessage()>Submit</button></td>
+        </tr>
+    </table>
+</form></center>
+
+<script type="module">
+
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+    import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js";
+
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional  
+  
+    const firebaseConfig = {
+        apiKey: "AIzaSyAxuceVyd8CpW8zArrvRD_huKfdhU7sXfk",
+        authDomain: "registration-3adac.firebaseapp.com",
+        databaseURL: "https://registration-3adac-default-rtdb.firebaseio.com",
+        projectId: "registration-3adac",
+        storageBucket: "registration-3adac.appspot.com",
+        messagingSenderId: "872958971404",
+        appId: "1:872958971404:web:052fb285cc072f0a6ae829",
+        measurementId: "G-TC17EGZW8F"
+      };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+
+
+
+    //listen for submit event//(1)
+    document.getElementById('frmContact').addEventListener('submit', formSubmit);
+var i;
+var gender;
+  //Submit form(1.2)
+  function formSubmit(e) {
+    e.preventDefault();
+    // Get Values from the DOM
+    let fname = document.querySelector('#fname').value;
+    let lname = document.querySelector('#lname').value;
+    let email = document.querySelector('#email').value;
+    let password = document.querySelector('#password').value;
+    let cpassword = document.querySelector('#cpassword').value;
+    let bio = document.querySelector('#bio').value;
+    let age = document.querySelector('#age').value;
+    let income = document.querySelector('#myinput').value;
+    let status = document.querySelector('#status').value;
+
+    var ele = document.getElementsByName('gen');
+ 
+    for (i = 0; i < ele.length; i++) {
+        if (ele[i].checked)
+            gender =  ele[i].value;
+    }
+
+    sendMessage(fname, lname ,email, password,cpassword, bio, age, income,status,gender);
+
+  }
+
+  function sendMessage(fname, lname ,email, password,cpassword, bio, age, income,status,gender) {
+    const database = getDatabase();
+
+    set(ref(database, 'users/' + Math.floor(Math.random() * 10000000)), {
+      fname: fname,
+      lname: lname,
+      email: email,
+      password: password,
+      cpassword: cpassword,
+      bio: bio,
+      age: age,
+      income: income,
+      gender:gender
+    }).then(() => {
+
+     document.getElementById('frmContact').reset();
+    }).catch((error) => {
+      alert(error);
+      document.getElementById('frmContact').reset();
+
+    })
+  }
+
+  
+</script>
+</body>
+</html>

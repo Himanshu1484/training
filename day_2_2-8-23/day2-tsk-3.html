@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-3</title>
+    <style>
+        #anme1{
+            animation-name: anime1;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            transition: 3s;
+            background-color: blue;
+            padding:  100px;
+            width: fit-content;
+            float: left;
+        }
+        @keyframes anime1 {
+            0%{
+                transform: translate(100px,200px);
+            }
+            25%{
+                transform: translate(200px,300px);
+
+            }
+            50%{
+                transform: translate(300px,400px);
+
+            }
+            75%{
+                transform: translate(200px,300px);
+
+            }
+            100%{
+                transform: translate(100px,200px);
+
+            }
+        }
+        #anme2{
+            margin-top: 100px;
+            margin-left: 100px;
+            animation-name: anime2;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            transition: 3s;
+            background-color: blue;
+            padding:  100px;
+            width: fit-content;
+            float: left;
+
+        }
+        @keyframes anime2 {
+            0%{
+                transform: rotate(0deg);
+            }
+            25%{
+                transform: rotate(90deg);
+
+            }
+            50%{
+                transform: rotate(180deg);
+
+            }
+            75%{
+                transform: rotate(270deg);
+
+            }
+            100%{
+                transform: rotate(360deg);
+
+            }
+        }
+        #anme3{
+            margin-top: 100px;
+            margin-left: 400px;
+            animation-name: anime3;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            transition: 3s;
+            background-color: blue;
+            padding:  100px;
+            width: fit-content;
+            float: left;
+
+        }
+        @keyframes anime3 {
+            0%{
+                transform:skew(10deg,10deg)
+            }
+            25%{
+                transform:skew(0deg,0deg)
+
+            }
+            50%{
+                transform:skew(-10deg,-10deg)
+
+            }
+            75%{
+                transform:skew(0deg,0deg)
+
+            }
+            100%{
+                transform:skew(10deg,10deg)
+
+            }
+        }
+    </style>
+</head>
+<body>
+     <div id="anme2">
+        animation 2
+    </div>
+    <div id="anme1">
+        animation 1
+    </div>
+    <div id="anme3">
+        animation 1
+    </div>
+   
+</body>
+</html>

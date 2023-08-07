@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <style>
+        body{
+            padding-top: 180px;
+          }
+           form{margin: auto;
+               
+          }
+          div{ width: fit-content;
+           border: 2px solid black ;
+           border-radius: 5px;
+           padding: 10px;
+           background-color: rgb(143, 236, 236);
+          }
+          input{
+            border-radius: 5px;
+            width: 150px;
+          }
+          label{
+            color: rgb(48, 126, 99);
+            font-weight: bold;
+          }
+          button{color: aliceblue;
+            font-weight: bold;
+            background-color: rgb(47, 214, 158);
+          }
+    </style>
+</head>
+<body>
+    <center>
+        <form action="/" style="border: 2px;border-color:black">
+            <div style="text-align: left;">
+             <center>  <label for="" >CREATE ACCOUNT</label></center> <br>
+            <label for="First_name" >First_Name*::</label>
+            <input type="text" name="First_name"  required placeholder="Enter your first name:">&nbsp;
+            <label for="Last_Name" >Last_Name::</label>
+            <input type="text" name="Last_Name" placeholder="Enter your Last_Name:"><br><br>
+            <label for="Email">Email*::</label>
+            <input type="text" name="Email" style="width: 490px;" required placeholder="Enter your Email:">&nbsp;<br><br>
+            <label for="Password">Password*::</label>
+            <input type="password" name="Password"  required placeholder="enter your password">
+            <label for="CPassword">Confirm Password*::</label>
+            <input type="password" name="Password" required placeholder="Confirm your password"><br><br>
+            <label for="Gender">Gender:</label>&nbsp;
+            <label for="Gen">Male:</label>
+            <input type="radio" style="width: fit-content;" name="Gen"  value="Male">
+            <label for="Gen" >Female:</label>
+            <input type="radio" style="width: fit-content;" name="Gen"  value="Female">
+            <label for="Hobbies" style="margin-left:30px ;">Hobbies:</label>&nbsp;
+            <Select name="Hobbies" style="width: 200px;">
+                <option value="Music">Music</option>
+                <option value="Sports">Sports</option>
+                <option value="Travels">Travels</option>
+                <option value="Movies">Movies</option>
+                </Select><br><br>
+            <label for="SOII" >Source of income:</label>&nbsp;
+            <label for="income" style="margin-left:53%">Income</label><br>
+            <input type="checkbox" name="SOI" style="width:fit-content;">
+            <label for="SOI" >Employed</label>&nbsp;
+            <input type="checkbox" name="SOI" style="width:fit-content;">
+            <label for="SOI" >UnEmployed</label>&nbsp;
+            <input type="range" style="margin-left: 150px;" min="0" max="20000">
+            <label for="income" style="width: fit-content;background-color:rgba(49, 202, 202, 0.808)">20k</label><br><br>
+            <label for="Profile" >Uplod profile picture</label>&nbsp;
+            <input type="file" name="Profile" id="">
+            <label for="Age" style="margin-left: 20px;">Age::</label>&nbsp;
+            <input type="number" name="Age" id=""><br><br>
+            <label for="bio">Bio</label><br>
+            <textarea name="bio" id="" cols="74" rows="4"></textarea><br>          
+            <button type="submit" align="right">create</button>
+        </div>
+        </form></center>
+</body>
+</html>

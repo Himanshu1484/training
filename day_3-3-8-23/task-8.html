@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-8</title>
+</head>
+<body>
+    <p>8. "Write a JavaScript function that takes a string and returns the count of
+        vowels contained within it.
+        Ex. User Input : Celebration ➙ 5"</p>
+    <input type="text" placeholder="Enter string to check vowels::" id="str">
+    <p id="p"></p>
+    <button onclick="fun()">submit</button>
+
+    <script>
+        function fun(){
+            var str= ""+document.getElementById("str").value;
+            var i;
+            var c=0;
+            for(i=0;i<str.length;i++)
+            {
+                if(str.charAt(i)=='a' || str.charAt(i)=='e' ||str.charAt(i)=='i' ||str.charAt(i)=='o' ||str.charAt(i)=='u')
+                {
+                    c++;
+                }
+            }
+            document.getElementById("p").innerHTML=str+" --> "+c;
+        }
+    </script>
+</body>
+</html>
