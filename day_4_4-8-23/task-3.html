@@ -28,7 +28,7 @@
                 }
                 else if((Math.sign(time)==-1))
                 {
-                     var days = -1*(time / (1000 * 60 * 60 * 24))|0;
+                    var days = -1*(time / (1000 * 60 * 60 * 24))|0;
                     var hours = -1*((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))|0+(24*days);
                     var minutes =-1*((time % (1000 * 60 * 60)) / (1000 * 60))|0;
                     var seconds = -1*((time % (1000 * 60)) / 1000)|0;
