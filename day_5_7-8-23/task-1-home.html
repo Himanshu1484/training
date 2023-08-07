@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        html,body{
+            margin: 0;
+            height: 100%;
+        }
+        #banner{
+            width: 100%;
+            background-color: #29252500;
+        }
+        .td1{ 
+            background-color: #a0989800;
+            text-align: center;
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+            font-size: large;
+            font-family: 'Courier New', Courier, monospace;
+            
+        }
+        .bcolor{
+            border-radius: 50%;
+            background-color: rgba(240, 255, 255, 0.724);
+             padding: 10px;
+            width: 150px; }
+            .bcolor:hover{
+            background-color: #bbb8b8ae;
+            color: rgba(240, 248, 255, 0.845);
+            }
+        h3{ 
+            border-radius: 50%;
+            background-color: rgba(240, 255, 255, 0.724);
+            margin: 0;
+            padding: 10px;
+            width: 150px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        h3:hover{
+            background-color: #bbb8b8ae;
+            color: rgba(240, 248, 255, 0.845);
+        }
+   
+        #s{
+            width: 690px;
+        }
+        #div{
+            height: 300px;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url("https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png");
+        }
+        input{
+            border: none;
+            border-radius: 10px;
+            width: 500px;
+            height: 40px;
+        }
+        #search{
+            border: none;
+            border-radius: 10px;
+            background-color: #ffffff;
+            width: 660px;
+        }
+        #sr{margin-left: 45px;
+            padding: 14px;
+            width: 100px;
+            border: none;
+            border-radius: 10px;
+            color: rgba(0, 0, 0, 0.797);
+            font-size: 13px;
+            font-weight: bold;
+            background-color: #d0cfcfd8;
+        }
+        #wel{
+            font-size:50px;
+            font-weight: bold;
+            color: #ffffff;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .item{
+            display: flex;
+            justify-content: center;
+            position: relative;
+            place-items: center;
+
+        }
+        img{
+            position: absolute;
+            z-index: -1;
+            border-radius: 20px;
+            height: 180px;
+            width: 180px;
+        }
+        .btn{
+            background-color: rgb(224, 217, 217);
+            color: rgba(0, 128, 0, 0.852);
+            font-weight: bold;
+            border: rgb(219, 216, 216);
+            border-radius: 5px;
+            margin-top: 180px;
+            height: 30px;
+            width: 100px;}
+        .btn:hover{
+            background-color: #cbc7c7;
+            color: rgb(37, 183, 29);
+
+        }
+        .container{
+            margin-top: 50px;
+            width: 270px;
+            padding: 10px;
+            background-color: #d5d1d125;
+            border-radius: 20px;
+            margin-right: 20px;
+        }
+        .container:hover{
+            background-color: #a8a1a123;
+
+        }
+
+        .tag{
+            text-align: right;
+        }
+
+
+        
+        #dropdown {
+            position: relative;
+            display: block;
+            margin: 0;
+            height: 300px;
+            background-color: #00000071;
+                    }
+
+        #dropitems {
+            display: none;
+            position: absolute;
+            background-color: #676565cb;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            margin-top: 8px;
+            border-style: solid;
+            border: 2px solid rgb(40, 40, 40);
+            border-radius: 3px;
+                  }
+
+            #dropitems a {
+            color:aliceblue;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            background-color: rgba(12, 12, 12, 0.288);
+            border-style: solid;
+            border: 1px solid rgb(52, 52, 53);
+                    }
+
+            #dropitems a:hover {background-color: rgba(120, 130, 148, 0.616);color: black;}
+        
+
+    </style>
+</head>
+<body>
+
+    <!-- banner img -->
+    <div id="div">
+    <table id="banner">
+        <tr><td style="width: 120px;" class="td1"></td>
+            <td class="td1"><h3>FoodMart</h3></td> 
+            <td id="s" class="td1"><center>
+            <div id="search"> 
+                <input type="text" placeholder="   Search for the food"> <button id="sr">search</button>
+             </div> </center> 
+            </td>
+            <td onclick="location.href='task-2-register.html'"><p class="bcolor td1">Login</p></td>
+            <td onclick="location.href='task-2-login.html'"><p class="bcolor td1">Sign up</p></td>
+            <td onclick="menu()">
+                <p class="bcolor td1">Cart</p>
+                <div id="dropitems">
+                <a onclick="q1(0)" href="#a1">Intro</a><br>
+                <a onclick="q1(1)" href="#a2">Technical-summary</a><br>
+                <a onclick="q1(2)" href="#a3">Qualification</a><br>
+                <a onclick="q1(3)" href="#a4">Skills</a><br>
+                <a onclick="q1(4)" href="#a5">Exprience</a><br>
+                <a onclick="q1(5)" href="#a6">Portfolio</a><br>
+                <a onclick="q1(6)" href="#a7">Roles</a>
+            </div></td>
+            <td style="width: 80px;" class="td1"></td>
+        </tr>
+        <tr><td></td><td colspan="5"><div  id="dropdown" style="width: 100%;"></div></td><td></td></tr>
+    </table>
+<center>
+    <div style="margin-top: 60px;" id="wel">Welcome to FoodMart</div>
+</center>
+    </div>
+
+<!-- items-->
+
+
+<center>
+
+    <table>
+        <tr>
+            <td><section class="container">
+                <div class="item" align="center">
+                <img src="https://c4.wallpaperflare.com/wallpaper/1017/647/742/food-pizza-still-life-hd-wallpaper-preview.jpg" alt="">
+                <button class="btn" onclick="add()">Add</button>
+                </div>
+                <hr>
+                <table style="width: 100%;">
+                <tr><td><label>Margherita Pizza</label></td>
+                <td style="text-align: right;"> <label class="r">150 Rp.</label></td></tr>
+                </table>
+                
+               
+            </section>
+            </td>
+            <td><section class="container">
+                <div class="item" align="center">
+                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/dqlhjfj7trso8k3vjdcc" alt="">
+                <button class="btn" onclick="add()">Add</button>
+                </div>
+                <hr>
+                <table style="width: 100%;">
+                    <tr><td><label>Burger</label></td>
+                    <td style="text-align: right;"> <label class="r">150 Rp.</label></td></tr>
+                </table>
+            </section>
+            </td>
+            <td><section class="container">
+                <div class="item" align="center">
+                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/go4vyjwlbmvcmogvxqxv" alt="">
+                <button class="btn" onclick="add()">Add</button>
+                </div>
+                <hr>
+                <table style="width: 100%;">
+                    <tr><td><label>Idli-Sambhar</label></td>
+                    <td style="text-align: right;"> <label class="r">150 Rp.</label></td></tr>
+                </table>
+            </section>
+            </td>
+            <td><section class="container" style="margin-right: 0;">
+                <div class="item" align="center">
+                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/22ec161d3db329bc8d88cbac15312d21" alt="">
+                <button class="btn" onclick="add()">Add</button>
+                </div>
+                <hr>
+                <table style="width: 100%;">
+                    <tr><td><label>Manchurian</label></td>
+                    <td style="text-align: right;"> <label class="r">150 Rp.</label></td></tr>
+                </table>                
+            </section>
+            </td>
+        </tr>
+        <tr>
+            <td><section class="container">
+                <div class="item" align="center">
+                <img src="https://c4.wallpaperflare.com/wallpaper/1017/647/742/food-pizza-still-life-hd-wallpaper-preview.jpg" alt="">
+                <button class="btn" onclick="add()">Add</button>
+                </div>
+                <hr>
+                <table style="width: 100%;">
+                    <tr><td><label>Margherita Pizza</label></td>
+                    <td style="text-align: right;"> <label class="r">150 Rp.</label></td></tr>
+                </table>
+            </section>
+            </td>
+            <td><section class="container">
+                <div class="item" align="center">
+                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/dqlhjfj7trso8k3vjdcc" alt="">
+                <button class="btn" onclick="add()">Add</button>
+                </div>
+                <hr>
+                <table style="width: 100%;">
+                    <tr><td><label>Burger</label></td>
+                    <td style="text-align: right;"> <label class="r">150 Rp.</label></td></tr>
+                </table>
+            </section>
+            </td>
+            <td><section class="container">
+                <div class="item" align="center">
+                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/go4vyjwlbmvcmogvxqxv" alt="">
+                <button class="btn" onclick="add()">Add</button>
+                </div>
+                <hr>
+                <table style="width: 100%;">
+                    <tr><td><label>Idli-Sambhar</label></td>
+                    <td style="text-align: right;"> <label class="r">150 Rp.</label></td></tr>
+                </table>
+            </section>
+            </td>
+            <td><section class="container" style="margin-right: 0;">
+                <div class="item" align="center">
+                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/22ec161d3db329bc8d88cbac15312d21" alt="">
+                <button class="btn" onclick="add()">Add</button>
+                </div>
+                <hr>
+                <table style="width: 100%;">
+                    <tr><td><label>Manchurian</label></td>
+                    <td style="text-align: right;"> <label class="r">150 Rp.</label></td></tr>
+                </table>
+            </section>
+            </td>
+        </tr>
+    </table>
+
+</center>
+
+
+
+<script>
+    function add()
+    {
+
+        alert("added to cart; You can increase quantity from there.");
+    }
+    var b=0;
+    function menu()
+    {
+        if(b==0){document.getElementById('dropdown').style.display='block';b=1}
+            else{document.getElementById('dropdown').style.display='none';b=0}
+    }
+</script>
+</body>
+</html>
