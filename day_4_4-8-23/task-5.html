@@ -16,38 +16,27 @@
             var arr=str.split("");
             var tmp;
             var txt="";
+
             for(i=0;i<arr.length;i++)
             {
-                for(j=i;j<arr.length;j++)
-                if(arr[i].charCodeAt(0)>arr[j].charCodeAt(0))
-                {            document.getElementById("p").innerHTML="1";
-
-                    tmp=arr[i];
-                    arr[i]=arr[j];
-                    arr[j]=tmp;
-                }
+                arr[i]=parseInt(arr[i],10);
             }
-            
-            for(i=0;i<10;i++)
-            {var num=i;var c=0;
-                for(j=0;j<arr.length;j++)
+            txt+=arr[0];
+            for(j=1;j<arr.length;j++)
+            {
+                if(arr[j]==arr[j-1]+1)
                 {
-                    var no=parseInt(arr[j]);
-                    if(num==no)
-                    {
-                        c=1;
-                        break;
-                    }
-                    else{c=0;}
-
+                    txt+=arr[j]
                 }
-                if(c==1){
-                    txt=txt+i;
+                else{
+                    txt=txt+" "+arr[j];
                 }
-                else{txt=txt+"_";}
             }
+
             document.getElementById("p").innerHTML=txt;
 
+            
+           
 
         }
     </script>

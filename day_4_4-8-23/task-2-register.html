@@ -49,7 +49,7 @@
     </style>
 </head>
 <body><center>
-    <form action="task-2-login.html">
+    <form action="task-2-login.html" onsubmit="return fun()">
     <table>
         <tr>
             <td colspan="2" id="y" style="text-align: center;font-size:30px;color:aliceblue;background-color:rgb(166, 173, 179)"><b>Create Account</b></td>
@@ -73,11 +73,11 @@
         <tr>
             <td>
                 <label for="password">Password*</label><br>
-                <input type="password" name="password" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,16}" oninvalid="setCustomValidity('Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters')" required placeholder="Enter your password:" style="  width: 98%;">
+                <input type="password" id="pass" name="password" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,16}" oninvalid="setCustomValidity('Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters')" required placeholder="Enter your password:" style="  width: 98%;">
             </td>
             <td>
                 <label for="Confirm_Password">Confirm_Password*</label><br>
-                <input type="password" name="Confirm_Password" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,16}" oninvalid="setCustomValidity('Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters')" placeholder="Enter your password:" style="  width: 98%;">
+                <input type="password" id="cpass" name="Confirm_Password" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,16}" oninvalid="setCustomValidity('Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters')" placeholder="Enter your password:" style="  width: 98%;">
             </td>
         </tr>
         <tr>
@@ -123,7 +123,7 @@
                 <input type="file" name="profile"  placeholder="choose file" style="  width: 98%;">
             </td>
             <td>
-                <label for="Age">Age</label><br>
+                <label for="Age">Age*</label><br>
                 <input type="number" name="Age" required placeholder="Enter your Age:" style="  width: 98%;">
             </td>
         </tr>
@@ -138,5 +138,18 @@
         </tr>
     </table></center>
 </form>
+
+<script>
+    function fun(){
+        pass=document.getElementById("pass").value;
+        c_pass=document.getElementById("cpass").value;
+        if(pass!=c_pass)
+        {
+            alert("password does not match!");
+            return false;
+        }
+        else{return true;}
+    }
+</script>
 </body>
 </html>

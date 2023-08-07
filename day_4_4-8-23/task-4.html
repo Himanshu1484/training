@@ -11,19 +11,34 @@
         }
     </style>
 </head>
-<body onload="fun()">
+<body>
+    <input type="time" id="time" onchange="fun()">
     <p id="p"></p>
     <script>
 
         function fun(){
-        var d=new Date();
-        var hour=13-d.getHours();
-        var minute=60-d.getMinutes();
-        var second=60-d.getSeconds();
-        document.getElementById("p").innerHTML=""+hour+" hours"+minute+" minutes"+second+" seconds remaining for lunch";
-        setTimeout(fun, 1000);
 
+        var s =""+ document.getElementById("time").value;
+        var d=s.split(":");
+        var today= new Date();
+        hours=today.getHours();
+        minutes=today.getMinutes();
+        var hour=parseInt(d[0],10)-hours;
+        var minute=parseInt(d[1],10)-minutes;
+      if((Math.sign(hour)==-1)||(Math.sign(minute)==-1))
+      { 
+        if((Math.sign(hour)==-1)){hour*=-1}
+        if((Math.sign(minute)==-1)){minute*=-1}
+
+        document.getElementById("p").innerHTML=hour + " Hours " + minute + " Minutes " + "gone"; 
     }
+      else if((Math.sign(hour)==1)||(Math.sign(minute)==1))
+        {document.getElementById("p").innerHTML=hour + " Hours " + minute + " Minutes " + "remaining"; }
+
+        else{document.getElementById("p").innerHTML=" You are on time"}
+      
+    }
+     
     </script>
 </body>
 </html>
