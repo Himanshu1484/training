@@ -31,17 +31,22 @@
                     var days = -1*(time / (1000 * 60 * 60 * 24))|0;
                     var hours = -1*((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))|0+(24*days);
                     var minutes =-1*((time % (1000 * 60 * 60)) / (1000 * 60))|0;
-                    var seconds = -1*((time % (1000 * 60)) / 1000)|0;
+                    var seconds =today.getSeconds();
+                    hours-=18;
+                    minutes-=30;
                     document.getElementById("txt").innerHTML =hours + " hours, " + minutes + " minutes, " + seconds + " seconds passed";
-                
+                    
                 }
                 else if((Math.sign(time)==1))
             {
                 var days = (time / (1000 * 60 * 60 * 24))|0;
                 var hours = ((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))|0+(24*days);
-                var minutes =((time % (1000 * 60 * 60)) / (1000 * 60))|0;
+                var minutes =60-today.getMinutes();
                 var seconds = ((time % (1000 * 60)) / 1000)|0;
-                document.getElementById("txt").innerHTML =hours + " hours, " + minutes + " minutes, " + seconds + " seconds remaining";
+                hours-=5;
+                var thour=24-today.getHours()+(24*days);
+                document.getElementById("txt").innerHTML =thour + " hours, " + minutes + " minutes, " + seconds + " seconds remaining";
+                //document.getElementById("txt").innerHTML =thour;
             }
         }
         </script>
