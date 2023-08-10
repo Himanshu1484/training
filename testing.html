@@ -205,7 +205,6 @@
             color: rgb(37, 183, 29);
 
         }
-       
         .ccontainer{
             margin-top: 50px;
             width: 160px;
@@ -221,7 +220,7 @@
         .clabel{
             font-size:smaller;
         }
-        .bt1{margin: 0;
+        button{margin: 0;
             width: 43%;text-align: center;
             padding: 0;
             height: 90%;
@@ -235,7 +234,7 @@
             padding: 0;
             height: 80%;
         }
-        .cbtn:hover .bt1,.cbtn:hover .count{ background-color: #cbc7c7;}
+        .cbtn:hover button,.cbtn:hover .count{ background-color: #cbc7c7;}
         .tb{width: 100%;}
         #cart{
             margin-left:20px;margin-right:20px
@@ -249,41 +248,6 @@
         }
 
         /*   code for cart*/
-        .cabtn{padding-top: 2px;
-            background-color: rgb(224, 217, 217);
-            color: rgba(0, 128, 0, 0.852);
-            font-weight: bold;
-            border: rgb(219, 216, 216);
-            border-radius: 5px;
-            margin-top: 180px;
-            z-index: 1;
-            height: 30px;
-            width: 100px;}
-        .cabtn:hover{
-            background-color: #cbc7c7;
-            color: rgb(37, 183, 29);
-
-        }
-
-        .bt2{margin: 0;
-            width: 43%;text-align: center;
-            padding: 0;
-            height: 90%;
-            background-color: rgba(224, 217, 217, 0);
-            border: none;
-        }
-        .count1{margin: 0;
-            width: 50%;text-align: center;
-            border: none;
-            background-color: rgba(224, 217, 217, 0);
-            color: rgba(0, 128, 0, 0.852);
-            padding: 0;
-            height: 80%;
-        }
-        .cbtn:hover .bt2,.cbtn:hover .count1{ background-color: #cbc7c700;
-            color: rgb(37, 183, 29);}
-        
-       
 
     </style>
 </head>
@@ -302,7 +266,7 @@
             <td onclick="location.href='task-1-login.html'"><p class="bcolor td1">Login</p></td>
             <td onclick="location.href='task-1-login.html'"><p class="bcolor td1">Sign up</p></td>
             <td>
-                <i  id="crt" onclick="menu()" class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i>
+                <i  onclick="menu()" class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i>
             </td>
             <td style="width: 80px;" class="td1"></td>
         </tr>
@@ -316,7 +280,7 @@
                     <!-- cart code -->
                     <table id="cart">
                        
-                    </table>
+                </table>
                         <!-- cart code -->
                         <hr style="width: 95%;">
 
@@ -340,13 +304,13 @@
         <tr>
             <td><section class="container">
                 <div class="item" align="center">
-                <img class="f1" src="https://c4.wallpaperflare.com/wallpaper/1017/647/742/food-pizza-still-life-hd-wallpaper-preview.jpg" alt="">
+                <img src="https://c4.wallpaperflare.com/wallpaper/1017/647/742/food-pizza-still-life-hd-wallpaper-preview.jpg" alt="">
                 <button class="btn" onclick="add(1,'150 Rp.','Margherita Pizza','https://c4.wallpaperflare.com/wallpaper/1017/647/742/food-pizza-still-life-hd-wallpaper-preview.jpg')">Add</button>
                 </div>
                 <hr>
                 <table style="width: 100%;">
-                <tr><td><label class="lb1">Margherita Pizza</label></td>
-                <td style="text-align: right;"> <label class="r lb2">150 Rp.</label></td></tr>
+                <tr><td><label>Margherita Pizza</label></td>
+                <td style="text-align: right;"> <label class="r">150 Rp.</label></td></tr>
                 </table>
                 
                
@@ -354,37 +318,37 @@
             </td>
             <td><section class="container">
                 <div class="item" align="center">
-                <img class="f1" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/dqlhjfj7trso8k3vjdcc" alt="">
+                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/dqlhjfj7trso8k3vjdcc" alt="">
                 <button class="btn" onclick="add(2,'150 Rp.','Burger','https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/dqlhjfj7trso8k3vjdcc')">Add</button>
                 </div>
                 <hr>
                 <table style="width: 100%;">
-                    <tr><td><label class="lb1">Burger</label></td>
-                    <td style="text-align: right;"> <label class="r lb2">150 Rp.</label></td></tr>
+                    <tr><td><label>Burger</label></td>
+                    <td style="text-align: right;"> <label class="r">150 Rp.</label></td></tr>
                 </table>
             </section>
             </td>
             <td><section class="container">
                 <div class="item" align="center">
-                <img class="f1" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/go4vyjwlbmvcmogvxqxv" alt="">
+                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/go4vyjwlbmvcmogvxqxv" alt="">
                 <button class="btn" onclick="add(3,'150 Rp.','Idli-Sambhar','https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/go4vyjwlbmvcmogvxqxv')">Add</button>
                 </div>
                 <hr>
                 <table style="width: 100%;">
-                    <tr><td><label class="lb1">Idli-Sambhar</label></td>
-                    <td style="text-align: right;"> <label class="r lb2">150 Rp.</label></td></tr>
+                    <tr><td><label>Idli-Sambhar</label></td>
+                    <td style="text-align: right;"> <label class="r">150 Rp.</label></td></tr>
                 </table>
             </section>
             </td>
             <td><section class="container" style="margin-right: 0;">
                 <div class="item" align="center">
-                <img class="f1" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/22ec161d3db329bc8d88cbac15312d21" alt="">
+                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/22ec161d3db329bc8d88cbac15312d21" alt="">
                 <button class="btn" onclick="add(4,'150 Rp.','Manchurian','https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/22ec161d3db329bc8d88cbac15312d21')">Add</button>
                 </div>
                 <hr>
                 <table style="width: 100%;">
-                    <tr><td><label class="lb1">Manchurian</label></td>
-                    <td style="text-align: right;"> <label class="r lb2">150 Rp.</label></td></tr>
+                    <tr><td><label>Manchurian</label></td>
+                    <td style="text-align: right;"> <label class="r">150 Rp.</label></td></tr>
                 </table>                
             </section>
             </td>
@@ -392,160 +356,53 @@
         <tr>
             <td><section class="container">
                 <div class="item" align="center">
-                <img class="f1" src="https://c4.wallpaperflare.com/wallpaper/1017/647/742/food-pizza-still-life-hd-wallpaper-preview.jpg" alt="">
+                <img src="https://c4.wallpaperflare.com/wallpaper/1017/647/742/food-pizza-still-life-hd-wallpaper-preview.jpg" alt="">
                 <button class="btn" onclick="add(5,'150 Rp.','Margherita Pizza','https://c4.wallpaperflare.com/wallpaper/1017/647/742/food-pizza-still-life-hd-wallpaper-preview.jpg')">Add</button>
                 </div>
                 <hr>
                 <table style="width: 100%;">
-                <tr><td><label class="lb1">Margherita Pizza</label></td>
-                <td style="text-align: right;"> <label class="r lb2">150 Rp.</label></td></tr>
+                    <tr><td><label>Margherita Pizza</label></td>
+                    <td style="text-align: right;"> <label class="r">150 Rp.</label></td></tr>
                 </table>
-                
-               
             </section>
             </td>
             <td><section class="container">
                 <div class="item" align="center">
-                <img class="f1" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/dqlhjfj7trso8k3vjdcc" alt="">
+                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/dqlhjfj7trso8k3vjdcc" alt="">
                 <button class="btn" onclick="add(6,'150 Rp.','Burger','https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/dqlhjfj7trso8k3vjdcc')">Add</button>
                 </div>
                 <hr>
                 <table style="width: 100%;">
-                    <tr><td><label class="lb1">Burger</label></td>
-                    <td style="text-align: right;"> <label class="r lb2">150 Rp.</label></td></tr>
+                    <tr><td><label>Burger</label></td>
+                    <td style="text-align: right;"> <label class="r">150 Rp.</label></td></tr>
                 </table>
             </section>
             </td>
             <td><section class="container">
                 <div class="item" align="center">
-                <img class="f1" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/go4vyjwlbmvcmogvxqxv" alt="">
+                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/go4vyjwlbmvcmogvxqxv" alt="">
                 <button class="btn" onclick="add(7,'150 Rp.','Idli-Sambhar','https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/go4vyjwlbmvcmogvxqxv')">Add</button>
                 </div>
                 <hr>
                 <table style="width: 100%;">
-                    <tr><td><label class="lb1">Idli-Sambhar</label></td>
-                    <td style="text-align: right;"> <label class="r lb2">150 Rp.</label></td></tr>
+                    <tr><td><label>Idli-Sambhar</label></td>
+                    <td style="text-align: right;"> <label class="r">150 Rp.</label></td></tr>
                 </table>
             </section>
             </td>
             <td><section class="container" style="margin-right: 0;">
                 <div class="item" align="center">
-                <img class="f1" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/22ec161d3db329bc8d88cbac15312d21" alt="">
+                <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/22ec161d3db329bc8d88cbac15312d21" alt="">
                 <button class="btn" onclick="add(8,'150 Rp.','Manchurian','https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/22ec161d3db329bc8d88cbac15312d21')">Add</button>
                 </div>
                 <hr>
                 <table style="width: 100%;">
-                    <tr><td><label class="lb1">Manchurian</label></td>
-                    <td style="text-align: right;"> <label class="r lb2">150 Rp.</label></td></tr>
-                </table>                
+                    <tr><td><label>Manchurian</label></td>
+                    <td style="text-align: right;"> <label class="r">150 Rp.</label></td></tr>
+                </table>
             </section>
             </td>
         </tr>
-        <tr>
-            <td><section class="container">
-                <div class="item" align="center">
-                <img class="f1" src="https://c4.wallpaperflare.com/wallpaper/1017/647/742/food-pizza-still-life-hd-wallpaper-preview.jpg" alt="">
-                <button class="btn" onclick="add(9,'150 Rp.','Margherita Pizza','https://c4.wallpaperflare.com/wallpaper/1017/647/742/food-pizza-still-life-hd-wallpaper-preview.jpg')">Add</button>
-                </div>
-                <hr>
-                <table style="width: 100%;">
-                <tr><td><label class="lb1">Margherita Pizza</label></td>
-                <td style="text-align: right;"> <label class="r lb2">150 Rp.</label></td></tr>
-                </table>
-                
-               
-            </section>
-            </td>
-            <td><section class="container">
-                <div class="item" align="center">
-                <img class="f1" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/dqlhjfj7trso8k3vjdcc" alt="">
-                <button class="btn" onclick="add(10,'150 Rp.','Burger','https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/dqlhjfj7trso8k3vjdcc')">Add</button>
-                </div>
-                <hr>
-                <table style="width: 100%;">
-                    <tr><td><label class="lb1">Burger</label></td>
-                    <td style="text-align: right;"> <label class="r lb2">150 Rp.</label></td></tr>
-                </table>
-            </section>
-            </td>
-            <td><section class="container">
-                <div class="item" align="center">
-                <img class="f1" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/go4vyjwlbmvcmogvxqxv" alt="">
-                <button class="btn" onclick="add(11,'150 Rp.','Idli-Sambhar','https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/go4vyjwlbmvcmogvxqxv')">Add</button>
-                </div>
-                <hr>
-                <table style="width: 100%;">
-                    <tr><td><label class="lb1">Idli-Sambhar</label></td>
-                    <td style="text-align: right;"> <label class="r lb2">150 Rp.</label></td></tr>
-                </table>
-            </section>
-            </td>
-            <td><section class="container" style="margin-right: 0;">
-                <div class="item" align="center">
-                <img class="f1" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/22ec161d3db329bc8d88cbac15312d21" alt="">
-                <button class="btn" onclick="add(12,'150 Rp.','Manchurian','https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/22ec161d3db329bc8d88cbac15312d21')">Add</button>
-                </div>
-                <hr>
-                <table style="width: 100%;">
-                    <tr><td><label class="lb1">Manchurian</label></td>
-                    <td style="text-align: right;"> <label class="r lb2">150 Rp.</label></td></tr>
-                </table>                
-            </section>
-            </td>
-        </tr>
-        <tr>
-            <td><section class="container">
-                <div class="item" align="center">
-                <img class="f1" src="https://c4.wallpaperflare.com/wallpaper/1017/647/742/food-pizza-still-life-hd-wallpaper-preview.jpg" alt="">
-                <button class="btn" onclick="add(13,'150 Rp.','Margherita Pizza','https://c4.wallpaperflare.com/wallpaper/1017/647/742/food-pizza-still-life-hd-wallpaper-preview.jpg')">Add</button>
-                </div>
-                <hr>
-                <table style="width: 100%;">
-                <tr><td><label class="lb1">Margherita Pizza</label></td>
-                <td style="text-align: right;"> <label class="r lb2">150 Rp.</label></td></tr>
-                </table>
-                
-               
-            </section>
-            </td>
-            <td><section class="container">
-                <div class="item" align="center">
-                <img class="f1" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/dqlhjfj7trso8k3vjdcc" alt="">
-                <button class="btn" onclick="add(14,'150 Rp.','Burger','https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/dqlhjfj7trso8k3vjdcc')">Add</button>
-                </div>
-                <hr>
-                <table style="width: 100%;">
-                    <tr><td><label class="lb1">Burger</label></td>
-                    <td style="text-align: right;"> <label class="r lb2">150 Rp.</label></td></tr>
-                </table>
-            </section>
-            </td>
-            <td><section class="container">
-                <div class="item" align="center">
-                <img class="f1" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/go4vyjwlbmvcmogvxqxv" alt="">
-                <button class="btn" onclick="add(15,'150 Rp.','Idli-Sambhar','https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/go4vyjwlbmvcmogvxqxv')">Add</button>
-                </div>
-                <hr>
-                <table style="width: 100%;">
-                    <tr><td><label class="lb1">Idli-Sambhar</label></td>
-                    <td style="text-align: right;"> <label class="r lb2">150 Rp.</label></td></tr>
-                </table>
-            </section>
-            </td>
-            <td><section class="container" style="margin-right: 0;">
-                <div class="item" align="center">
-                <img class="f1" src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/22ec161d3db329bc8d88cbac15312d21" alt="">
-                <button class="btn" onclick="add(16,'150 Rp.','Manchurian','https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/22ec161d3db329bc8d88cbac15312d21')">Add</button>
-                </div>
-                <hr>
-                <table style="width: 100%;">
-                    <tr><td><label class="lb1">Manchurian</label></td>
-                    <td style="text-align: right;"> <label class="r lb2">150 Rp.</label></td></tr>
-                </table>                
-            </section>
-            </td>
-        </tr>
-       
     </table>
 
 </center>
@@ -554,29 +411,9 @@
     var c=6;
     var t=0;
     let q=-1;
-    a = new Array();
-    for(i=1;i<=16;i++)
-    {
-        a.push(i);
-    }
-    ca=new Array();
-    var it=0;
+    
     function add(v,price,name,s)
-    {  for(i=0;i<a.length;i++)
-        {
-            if(a[i]==parseInt(v))
-            {
-                ca.push(v);
-                delete a[i];
-                it++;
-                break;
-            }
-           
-        }
-         if(it==0){
-                return alert('already in the cart!!');
-                it++;
-            }it--;
+    {  
         document.getElementById("ct").style.display='none';
     t++;
          q+=1;
@@ -602,9 +439,8 @@
         div2.className+="cbtn";
         button1=document.createElement("button");
         button1.className+="pluse";
-        button1.className+=" bt1";
-        button1.innerHTML="+";
-        button1.setAttribute("onclick","pluse1("+q+","+v+");"+"pluse("+q+","+v+");")
+        button1.innerHTML="+"
+        button1.setAttribute("onclick","pluse("+q+");")
             
 
 
@@ -614,10 +450,8 @@
         label1.className+="count"
         button2=document.createElement("button");
         button2.className+="minus";
-        button2.className+=" bt1";
         button2.innerHTML="-"
-        button2.setAttribute("id",v);
-        button2.setAttribute("onclick","minus1("+q+","+v+");"+"minus("+q+","+v+");")
+        button2.setAttribute("onclick","minus("+q+","+v+");")
 
 
 
@@ -657,40 +491,6 @@
     tr.appendChild(td);
     table.appendChild(tr);
 
-    //add to btn code start
-
-
-    itm= document.getElementsByClassName("item");
-       bt=document.getElementsByClassName("btn");
-       bt[v-1].remove();
-       div5=document.createElement("div");
-       div5.className+="cabtn";
-       div5.className+=" btn";
-       button5=document.createElement("button");
-       button5.className+="pluse1";
-       button5.className+=" bt2";
-       button5.innerHTML="+"
-       button5.setAttribute("onclick","pluse1("+q+","+v+");"+"pluse("+q+","+v+");")
-           
-
-
-       label6=document.createElement("label");
-       label6.style.width="25%";
-       label6.innerHTML=1;
-       label6.className+="count1"
-       button6=document.createElement("button");
-       button6.className+="minus1";
-       button6.className+=" bt2";
-       button6.innerHTML="-";
-       button6.setAttribute("id",v);
-       button6.setAttribute("onclick","minus1("+q+","+v+");"+"minus("+q+","+v+");")
-       div5.appendChild(button5);
-    div5.appendChild(label6);
-    div5.appendChild(button6);
-       itm[v-1].appendChild(div5);
-
-    //add to btn code
-
  
  
         alert("added to cart; You can increase quantity from there.");
@@ -711,104 +511,49 @@
     }
 
 
-    function pluse1(s,v)
-    {
-        str=document.getElementsByClassName("count1")[s].innerHTML;
-        count=parseInt(str);
-        count+=1;
-        document.getElementsByClassName("count1")[s].innerHTML=count;
-    }
-    function pluse(s,v)
+    function pluse(s)
     {
         str=document.getElementsByClassName("count")[s].innerHTML;
         count=parseInt(str);
         count+=1;
         document.getElementsByClassName("count")[s].innerHTML=count;
     }
-    function minus1(s,v)
-    {
-        str=document.getElementsByClassName("count1")[s].innerHTML;
-        count=parseInt(str);
-        if(count>1)
-        {   count-=1;  document.getElementsByClassName("count1")[s].innerHTML=count;}
-
-
-            else{
-                itm= document.getElementsByClassName("item");
-                bt3=document.getElementsByClassName("cabtn");
-                
-               
-
-                buton=document.createElement("button");
-                buton.className+="btn";
-                buton.className+=" cabtn";
-                buton.innerHTML="Add"
-                img9=""+document.getElementsByClassName("f1")[v-1].src;
-                lb1=""+document.getElementsByClassName("lb1")[v-1].innerHTML;
-                lb2=""+document.getElementsByClassName("lb2")[v-1].innerHTML;
-                alert(v+"v"+img9+"img"+lb1+"lb1"+lb2+"lb2");
-                bt3[v-1].remove();
-
-                buton.setAttribute("onclick","add(\""+v+"\",\""+lb1+"\",\""+lb2+"\",\""+img9+"\");");
-                itm[v-1].appendChild(buton);
-              
-            }
-          
-       
-    }
-
-    function minus(s,v)
+    function minus(s)
     {
         str=document.getElementsByClassName("count")[s].innerHTML;
         count=parseInt(str);
         if(count>1)
         {   count-=1;  document.getElementsByClassName("count")[s].innerHTML=count;}
+        else{
+            item=document.getElementsByClassName("num");
+            item[s].remove();
+            
+            click1=document.getElementsByClassName("pluse");
+            c-=1;q-=1;t--;
 
+            if(t==0)
+            {document.getElementById("ct").style.display='block';}
 
-            else{
-                item=document.getElementsByClassName("num");
-                item[s].remove();
-                a.push(v);
-                for(i=0;i<ca.length;i++)
-                {
-                    if(ca[i]==v)
-                    {
-                        delete ca[i];
-                    }
-                }
-                
-                click1=document.getElementsByClassName("pluse");
-                c-=1;q-=1;t--;
-
-                if(t==0)
-                {document.getElementById("ct").style.display='block';}
-                click2=document.getElementsByClassName("minus")
-
-                for(i=0;i<click1.length;i++)
-                {    click1[i].removeAttribute("onclick");
-                id=click2[i].id;
-                    click1[i].setAttribute("onclick","pluse("+i+","+id+");")
-                }
-
-                for(i=0;i<click1.length;i++)
-                {    click2[i].removeAttribute("onclick");
-                    id=click2[i].id;
-                    click2[i].setAttribute("onclick","minus("+i+","+id+");");
-                }
-
+            for(i=0;i<click1.length;i++)
+            {    click1[i].removeAttribute("onclick");
+                click1[i].setAttribute("onclick","pluse("+i+");")
             }
+            click2=document.getElementsByClassName("minus")
+
+            for(i=0;i<click1.length;i++)
+            {    click2[i].removeAttribute("onclick");
+                click2[i].setAttribute("onclick","minus("+i+");")
+            }
+        
+
+
+           
+
+
+
+        }
        
     }
-
-    window.addEventListener('click', function(e){
-        if (!document.getElementById('dropdown').contains(e.target) && (!document.getElementById('crt').contains(e.target))){
-          {
-            document.getElementById('dropdown').style.display='none';
-            document.getElementById("wel").style.display='block';
-            b=0
-          }
-      } 
-    })
 </script>
 </body>
 </html>

@@ -5,26 +5,128 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task-6</title>
     <style>
-        body {
-            margin: 0; 
-          
-            height: 100vh;  
-            
-                }    
-                div{  display: flex;
-            justify-content: center;position: relative;
+        .citem{
+            display: flex;
+            justify-content: center;
+            position: relative;
             place-items: center;
 
-                } 
-       
+        }
+        .cimg{
+            position: absolute;
+            z-index: -1;
+            border-radius: 20px;
+            height: 100px;
+            width: 100px;
+        }
+        .cbtn{padding-top: 2px;
+            background-color: rgb(224, 217, 217);
+            color: rgba(0, 128, 0, 0.852);
+            font-weight: bold;
+            border: rgb(219, 216, 216);
+            border-radius: 5px;
+            margin-top: 100px;
+            height: 30px;
+            width: 60px;}
+        .cbtn:hover{
+            background-color: #cbc7c7;
+            color: rgb(37, 183, 29);
+
+        }
+        .ccontainer{
+            margin-top: 50px;
+            width: 160px;
+            padding: 10px;
+            background-color: #d5d1d125;
+            border-radius: 20px;
+            margin-right: 20px;
+        }
+        .ccontainer:hover{
+            background-color: #a8a1a123;
+
+        }
+        .clabel{
+            font-size:smaller;
+        }
+        button{margin: 0;
+            width: 25%;
+            text-align: center;
+            padding: 0;
+            height: 90%;
+            background-color: rgb(224, 217, 217);
+            border: none;
+        }
+        .count{margin: 0;
+            width: 25%;text-align: center;
+            border: none;
+            background-color: rgb(224, 217, 217);
+            padding: 0;
+            height: 80%;
+        }
+        .cbtn:hover button,.cbtn:hover .count{ background-color: #cbc7c7;}
+        .tb{width: 100%;}
+
+      
  
     </style>
 </head>
 <body>
-    <center>
-    <div>dafadf</div></center>
-    <h1>first Name</h1>
-    <h2>Second Name</h2>
-    <h3>third item</h3>
+    <section class="ccontainer">
+        <div class="citem" align="center">
+        <img class="cimg" src="https://c4.wallpaperflare.com/wallpaper/1017/647/742/food-pizza-still-life-hd-wallpaper-preview.jpg" alt="">
+
+        <div class="cbtn">
+            <button onclick="pluse(0)">+</button>
+            <label class="count">0</label>
+            <button onclick="minus(0)">-</button>
+        </div>
+        </div>
+        <hr>
+        <table class="tb">
+        <tr><td><label class="clabel">Margherita Pizza</label></td>
+        <td style="text-align: right;"> <label class="clabel r">150 Rp.</label></td></tr>
+        </table>     
+
+    </section>
+
+    <div id="x"></div>
+    <script>
+        function pluse(s)
+        {
+            str=document.getElementsByClassName("count")[s].innerHTML;
+            count=parseInt(str);
+            count+=1;
+            document.getElementsByClassName("count")[s].innerHTML=count;
+        }
+        function minus(s)
+        {
+            str=document.getElementsByClassName("count")[s].innerHTML;
+            count=parseInt(str);
+            if(count>0)
+            {   count-=1; }
+            document.getElementsByClassName("count")[s].innerHTML=count;
+        }
+        div=document.createElement("div");
+        div.className+=" r";
+        document.getElementById("x").appendChild(div);
+
+    </script>
 </body>
 </html>
+
+
+
+itm= document.getElementsByClassName("item");
+bt3=document.getElementsByClassName("cabtn");
+alert(v);
+bt3[v-1].remove();
+buton=document.createElement("button");
+buton.className+="btn";
+buton.className+=" cabtn";
+buton.innerHTML="Add"
+img9=document.getElementsByClassName("f1")[v-1].src;
+lb1=document.getElementsByClassName("lb1")[v-1].innerHTML;
+lb2=document.getElementsByClassName("lb2")[v-1].innerHTML;
+alert(v+"v"+img9+"img"+lb1+"lb1"+lb2+"lb2");
+buton.setAttribute("onclick","add("+v+","+lb1+","+lb2+","+img9+");");
+itm[v-1].appendChild(buton);

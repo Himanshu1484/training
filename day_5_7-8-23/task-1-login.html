@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+
+    <style>
+       html,body{
+        padding: 0;
+        height: 100%;
+       }
+       body{
+        background-image: url("https://img.freepik.com/free-vector/fast-food-black-background-poster_1284-14589.jpg");
+       }
+        input{
+            border-radius: 4px;
+            width: 400px;
+            height: 20px;
+            transition: 1s;
+        } 
+          table{
+            padding: 10px;
+            border-collapse: separate;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.774);
+            margin-top: 150px;
+            transition: 1s;
+        }
+        td{
+           padding-bottom: 15px;transition: 1s;
+        }
+        label{
+            color: rgb(26, 106, 81); 
+        }
+        button{
+            color: aliceblue;
+            background-color: rgba(11, 60, 44, 0.795);
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+          
+        }
+        .btn{background-color: rgb(103, 125, 117);
+        color: rgba(0, 0, 0, 0.785);
+        font-weight: bold;}
+
+        /*  Width   */
+        @media only screen and (max-width: 550px)  {
+            input,button{            transition: 1s;
+                width: 350px;
+            }            
+        }
+      
+        @media only screen and (max-width: 450px)  {
+            input,button{
+                width: 300px;
+            }            
+        }
+        @media only screen and (max-width: 400px)  {
+            input,button{
+                width: 200px;
+            }            
+        }
+        @media only screen and (max-width: 300px)  {
+            input,button{
+                width: 140px;
+            }            
+        }
+        @media only screen and (max-width: 200px)  {
+            input,button{
+                width: 100px;
+            }            
+        }
+        
+        /*   Height   */
+
+        @media only screen and (max-height: 450px)  {
+     
+            table{margin-top: 50px;transition: 1s;} 
+            td{padding-bottom: 15px;}         
+        }
+        @media only screen and (max-height: 400px)  { 
+
+            td{padding-bottom: 10px;}        
+        table{margin-top: 30px;transition: 1s;} 
+        }
+        @media only screen and (max-height: 360px)  {    
+                td{padding-bottom: 5px;} 
+                table{margin-top: 10px;transition: 1s;}    
+                input{            transition: 1s;
+                         height: 10px;            }     
+}
+     
+    </style>
+</head>
+<body>
+<center>
+    <form action="task-1-home.html">
+        <table>
+            <tr>
+                <td><label for="Uname">Enter Your User Name*:</label><br>
+                <input type="text" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{5,16}" oninvalid="setCustomValidity('Must contain at least one number and one uppercase and lowercase letter, and at least 5 or more characters')" required placeholder="Enetr your name"></td>
+            </tr>
+            <tr>
+                <td><label for="pwd">Enter Your Password*:</label><br>
+                <input type="password"  pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,16}" oninvalid="setCustomValidity('Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters')" required><hr style="margin-top: 20px;"></td>
+            </tr>
+            <tr>
+                <td><button class="btn" style="width: 400px;">Continue with Email</button></td>
+            </tr>
+            <tr>
+                <td><button class="btn" style="width: 400px;">Continue with Google</button></td>
+            </tr>
+            <tr>
+                <td style="  text-align: right;"><button type="submit">Submit</button></td>
+            </tr>
+        </table>
+    </form>
+</center>
+
+
+</body>
+</html>
