@@ -1,9 +1,12 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class task2 {
     public static void main(String[] args) {
-        String str="edcbaEBCDA";
+  Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the char string to arrenge characters");
+        String str=sc.nextLine();
         List<Character> ls=new ArrayList<>();
         for(char ch:str.toCharArray())
         {

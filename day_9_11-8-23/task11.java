@@ -1,8 +1,14 @@
+import java.util.Scanner;
+
 public class task11 {
     public static void main(String[] args) {
-        for(int i=0;i<5;i++)
+        System.out.println("Enter the size of pattern::");
+        Scanner sc=new Scanner(System.in);
+        int s=sc.nextInt();
+        s=(s/2)+1;
+        for(int i=0;i<s;i++)
         {
-            for(int k=i;k<5;k++)
+            for(int k=i;k<s;k++)
             {
                 System.out.print(" ");
             }
@@ -16,9 +22,9 @@ public class task11 {
             }
             System.out.println();
         }
-        for(int i=3;i>=0;i--)
+        for(int i=s-2;i>=0;i--)
         {
-            for(int k=i;k<5;k++)
+            for(int k=i;k<s;k++)
             {
                 System.out.print(" ");
             }

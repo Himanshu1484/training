@@ -1,6 +1,16 @@
+import java.util.Scanner;
+
 public class task3 {
     public static void main(String[] args) {
-        int[] ls= {98,32,72,94,75,73,92,36,28,34};
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the no of items to add in array");
+        int no=sc.nextInt();
+        int[] ls=new int[no];
+        for(int j=0;j<no;j++)
+        {
+            System.out.println("Enter no"+(j+1));
+            ls[j]=sc.nextInt();
+        }
         int temp;
         for(int i=0;i<ls.length;i++)
         {
@@ -14,7 +24,6 @@ public class task3 {
                 }
 
             }
-            System.out.println(ls[i]);
         }
         System.out.println("Second biggest value is::"+ls[1]);
     }

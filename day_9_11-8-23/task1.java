@@ -1,6 +1,10 @@
+import java.util.Scanner;
+
 public class task1 {
     public static void main(String[] args) {
-        String str="WELCOME TO MV CLOUDS";
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the string to trime spaces");
+        String str=sc.nextLine();
         char[] c=str.toCharArray();
         char[] b=new char[str.length()];
         int j=0;

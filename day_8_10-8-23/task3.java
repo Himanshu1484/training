@@ -5,24 +5,29 @@ public class task3 {
     {
         for(int i:list)
         {
-               if(i%2!=0)
+               if(i%2==0)
                 {
                    return false;
                 }
         }return true;
     }
     public static void main(String[] args) {
-        ArrayList<Integer> list=new ArrayList<Integer>(){{
-            // add(1);
-            // add(3);
-            add(4);
-            // add(5);
-            add(6);
-            // add(7);
-            add(8);
-              }};
-              check(list);
-             System.out.println(check(list));
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the no of items to add in array");
+        int no=sc.nextInt();
+         ArrayList<Integer> list=new ArrayList<Integer>(){{}};
+
+        for(int j=0;j<no;j++)
+        {
+            System.out.println("Enter no"+(j+1));
+            list.add(sc.nextInt());
+        }
+        if(check(list)){
+        System.out.println("List contains ony odd numbers");
+        }
+        else{
+        System.out.println("List contains ony even numbers");
+        }
 
     }
 }
