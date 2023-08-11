@@ -1,36 +1,27 @@
-public class west {
-    public static void main(String[] args) {
-        for(int i=0;i<5;i++)
-        {
-            for(int k=i;k<5;k++)
-            {
-                System.out.print(" ");
-            }
-            for(int j=0;j<=i;j++)
-            {                
-              if(j!=i)
-                    {
-                       System.out.print("*"+i); 
-                    }
-                    else{System.out.print("*");}
-            }
-            System.out.println();
-        }
-        for(int i=3;i>=0;i--)
-        {
-            for(int k=i;k<5;k++)
-            {
-                System.out.print(" ");
-            }
-            for(int j=0;j<=i;j++)
-            {                
-              if(j!=i)
-                    {
-                       System.out.print("*"+i); 
-                    }
-                    else{System.out.print("*");}
-            }
-            System.out.println();
-        }
-    }
+// A Java program to demonstrate that invoking a method
+// on null causes NullPointerException
+import java.io.*;
+
+class west
+{
+	public static void main (String[] args)
+	{
+		// Initializing String variable with null value
+		String ptr = null;
+
+		// Checking if ptr.equals null or works fine.
+		try
+		{
+			// This line of code throws NullPointerException
+			// because ptr is null
+			if (ptr.equals("gfg"))
+				System.out.print("Same");
+			else
+				System.out.print("Not Same");
+		}
+		catch(NullPointerException e)
+		{
+			System.out.print("NullPointerException Caught");
+		}
+	}
 }
