@@ -1,15 +1,15 @@
 interface a{
-public void calla();
+ void calla();
 }
 interface b{
-public void callb();
+ void callb();
 
 }
 public class task6 implements a,b {
-   void calla(){
+   public void calla(){
         System.out.println("i am a");
     }
-    void callb(){
+    public void callb(){
         System.out.println("i am b");
     }
     public static void main(String[] args) {
