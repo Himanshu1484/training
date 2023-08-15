@@ -23,26 +23,22 @@
 </head>
 <body>
     
-    <div class="draggable" draggable="true" draggable="true" ondragstart="drag(event)"></div>
-    <div style="  width: 350px;
-    height: 70px;
-    padding: 10px;
-    border: 1px solid #8c8484;" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-    <div id="fixed"  ></div>
+    <div class="draggable"></div>
+    <div id="fixed"></div>
 <script>
-   
-  function allowDrop(ev) {
-  }
-  
-  function drag(ev) {
-    ev.dataTransfer.setData("text", ev.target.id);
-  }
-  
-  function drop(ev) {
-    ev.preventDefault();
-    var data = ev.dataTransfer.getData("text");
-    ev.target.appendChild(document.getElementById(data));
-  }
+    interact("#draggable").draggable({
+        onmove: (e) => {
+          const target = e.target;
+          const x = (parseFloat(target.getAttribute("data-x")) || 0) + e.dx;
+          const y = (parseFloat(target.getAttribute("data-y")) || 0) + e.dy;
+      
+          target.style.webkitTransform = target.style.transform = "translate(${x}px, ${y}px)";
+      
+          target.setAttribute("data-x", x);
+          target.setAttribute("data-y", y);
+        }
+      });
+      
 </script>
 </body>
 </html>

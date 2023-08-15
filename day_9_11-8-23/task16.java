@@ -10,10 +10,14 @@ public class task16 {
         // There is one way to achieve a sum of 0 with 0 dice
         dp[0][0] = 1;
 
-        for (int i = 1; i <= numDice; i++) {
-            for (int j = 1; j <= targetSum; j++) {
-                for (int k = 1; k <= 6; k++) {
-                    if (j - k >= 0) {
+        for (int i = 1; i <= numDice; i++) 
+        {
+            for (int j = 1; j <= targetSum; j++) 
+            {
+                for (int k = 1; k <= 6; k++) 
+                {
+                    if (j - k >= 0) 
+                    {
                         dp[i][j] += dp[i - 1][j - k];
                     }
                 }
@@ -24,8 +28,8 @@ public class task16 {
     }
 
     public static void main(String[] args) {
-        System.out.println(countCombinations(3, 4));  // Output: 3
-        System.out.println(countCombinations(3, 6)); // Output: 4221
+        System.out.println(countCombinations(3, 12));  
+        System.out.println(countCombinations(3, 6)); 
     }
 }
 

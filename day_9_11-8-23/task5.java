@@ -5,6 +5,9 @@ public class task5 {
         System.out.println("Enter the size of pattern::");
         Scanner sc=new Scanner(System.in);
         int s=sc.nextInt();
+        if(s%2!=0){
+            s++;
+        }
             for(int i=1;i<s;i++)
             {
                 if(i<(s/2))

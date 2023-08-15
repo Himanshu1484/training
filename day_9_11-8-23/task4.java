@@ -11,16 +11,16 @@ public class task4 {
             {
                 if(j==0||j==i)
                 {
-                    System.out.print("*");
+                    System.out.print("* ");
                 }
                 else if(i==s-1)
                 {
-                    System.out.print("*");
+                    System.out.print("* ");
 
                 }
                 else
                 {
-                    System.out.print(" ");
+                    System.out.print("  ");
 
                 }
             }

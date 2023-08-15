@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class task13 {
     public static void main(String[] args) {
-
+try{
         int no1,no2,c;
         int fact1=1,fact2=1,fact3=1;
         double pn,cn;
@@ -39,5 +39,9 @@ public class task13 {
         cn=pn/fact3;
         System.out.println("permutation of "+no1+" and "+no2+" is "+pn);
         System.out.println("combination of "+no1+" and "+no2+" is "+cn);
+}catch(Exception e)
+{
+    System.out.println("Exception occured::Enter the correct values");
+}    
     }
 }

@@ -1,44 +1,56 @@
-import java.security.*;
+// A Java program to demonstrate that invoking a method
+// on null causes NullPointerException
+import java.io.*;
+import java.util.Scanner;
 
-import javax.crypto.Cipher;
+class west
+{
+	public static void main (String[] args)
+	{
+			System.out.println("Enter the string to encode::");
+			Scanner sc=new Scanner(System.in);
+			String str=sc.nextLine();
+			char[] arr=str.toCharArray();
+			int[] arr1=new int[arr.length];
+			char[] str1=new char[arr1.length];
+		
+			for(int i=0;i<arr.length;i++)
+			{
+				arr1[i]=((((int)(arr[i]))*2)+8)/2;
+			}
+			for(int i=0;i<arr.length;i++)
+			{
+				str1[i]=(char)(arr1[i]);
+			}
 
-public class task8 {
-    public static void main(String[] args) throws Exception{
-        	   //Creating a Signature object
-      Signature sign = Signature.getInstance("SHA256withRSA");
-      
-      //Creating KeyPair generator object
-      KeyPairGenerator keyPairGen = KeyPairGenerator.getInstance("RSA");
-      
-      //Initializing the key pair generator
-      keyPairGen.initialize(2048);
-      
-      //Generate the pair of keys
-      KeyPair pair = keyPairGen.generateKeyPair();   
-      
-      //Getting the public key from the key pair
-      PublicKey publicKey = pair.getPublic();  
+			StringBuffer sb=new StringBuffer();
+			for(int i=0;i<arr.length;i++)
+			{
+				sb.append(str1[i]);
+			}
+			String str2=sb.toString();
+			System.out.println("Encoded String is ::"+str2);
+			char[] arr2=str2.toCharArray();
+			int[] arr11=new int[arr2.length];
+			char[] str11=new char[arr1.length];
+			
+			
+			for(int i=0;i<arr2.length;i++)
+			{
+				arr11[i]=(((((int)(arr2[i]))*2)-8)/2);
+			}
+			for(int i=0;i<arr2.length;i++)
+			{
+				str11[i]=(char)(arr11[i]);
+			}
+			StringBuffer sb1=new StringBuffer();
+			for(int i=0;i<arr2.length;i++)
+			{
+				sb1.append(str11[i]);
+			}
+			String str3=sb1.toString();
+			System.out.println("Decoded String is::"+str3);
 
-      //Creating a Cipher object
-      Cipher cipher = Cipher.getInstance("RSA/ECB/PKCS1Padding");
-
-      //Initializing a Cipher object
-      cipher.init(Cipher.ENCRYPT_MODE, publicKey);
-	  
-      //Add data to the cipher
-      byte[] input = "Welcome to Tutorialspoint".getBytes();	  
-      cipher.update(input);
-	  
-      //encrypting the data
-      byte[] cipherText = cipher.doFinal();	 
-      System.out.println( new String(cipherText, "UTF8"));
-
-      //Initializing the same cipher for decryption
-      cipher.init(Cipher.DECRYPT_MODE, pair.getPrivate());
-      
-      //Decrypting the text
-      byte[] decipheredText = cipher.doFinal(cipherText);
-      System.out.println(new String(decipheredText));
-   
-    }
+			
+	}
 }

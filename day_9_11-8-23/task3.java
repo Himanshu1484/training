@@ -2,6 +2,8 @@ import java.util.Scanner;
 
 public class task3 {
     public static void main(String[] args) {
+
+        try{
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter the no of items to add in array");
         int no=sc.nextInt();
@@ -26,5 +28,6 @@ public class task3 {
             }
         }
         System.out.println("Second biggest value is::"+ls[1]);
+    }    catch(Exception e){System.out.println("Enter the correct values");}
     }
 }
