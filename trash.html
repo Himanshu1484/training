@@ -5,44 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task-17</title>
     <style>
+
         .draggable{
             border-radius: 50%;
             width: 200px;
             height: 200px;
-            background-color: #ff0000;
-            cursor: move;
-            
+            cursor: move; 
+            display: flex;
+            align-items: center;
+            justify-content: center;            
         }
-        #fixed{
+        .fixed{
+            display: flex;
+            align-items: center;
+            justify-content: center;
             border-radius: 50%;
             width: 200px;
             height: 200px;
             background-color: #2f00ff;
         }
+       
     </style>
 </head>
-<body>
-    
-    <div class="draggable" draggable="true" draggable="true" ondragstart="drag(event)"></div>
-    <div style="  width: 350px;
-    height: 70px;
-    padding: 10px;
-    border: 1px solid #8c8484;" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-    <div id="fixed"  ></div>
 <script>
-   
+
+  var size=190;
   function allowDrop(ev) {
+    ev.preventDefault();
   }
   
   function drag(ev) {
     ev.dataTransfer.setData("text", ev.target.id);
   }
-  
+  var id=1;
   function drop(ev) {
     ev.preventDefault();
     var data = ev.dataTransfer.getData("text");
+    var drop=document.getElementById(data);
+    drop.style.height=size+"px";
+    drop.style.width=size+"px";
+    size-=10;
+    
     ev.target.appendChild(document.getElementById(data));
+    if(size<0){
+      size+=10;
+    }else{
+    ev.target.removeAttribute("ondrop");
+    ev.target.removeAttribute("ondragover");
+    drop.setAttribute("ondrop","drop(event)");
+    drop.setAttribute("ondragover","allowDrop(event)");}
+    div=document.createElement("div");
+    id++;
+    div.id="div"+id;
+   
+    div.className+=" draggable";
+    div.setAttribute("Draggable","true");
+    div.setAttribute("ondragstart","drag(event)");
+    var randomColor = Math.floor(Math.random()*16777215).toString(16);
+
+    div.style.backgroundColor="#"+randomColor;
+    document.body.appendChild(div);
   }
-</script>
+  </script>
+  </head>
+  <body>  
+  <div id="div1" class="fixed" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+  <br>
+  <div id="drag1" class="draggable" draggable="true" style="background-color: red;" ondragstart="drag(event)"></div>
 </body>
 </html>
