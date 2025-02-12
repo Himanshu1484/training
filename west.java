@@ -49,7 +49,7 @@ class west
 				sb1.append(str11[i]);
 			}
 			String str3=sb1.toString();
-			System.out.println("Decoded String is::"+str3);
+			System.out.println("Decoded String is ::"+str3);
 
 			
 	}
